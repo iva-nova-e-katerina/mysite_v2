@@ -1,0 +1,124 @@
+/*
+ Copyright (c) 2016 Ekaterina Alexeevna Ivanova. All rights reserved.
+ PROPRIETARY. For demo purposes only, not for redistribution or any commercial
+ use.
+ */
+/*
+    Created on : Aug 22, 2019, 2:29:09 PM
+    Author     : Ekaterina Alexeevna Ivanova
+*/
+
+@font-face {
+    font-family: 'cf_glitch_cityregular';
+    src: url('fonts/cfglitchcity-regular-webfont.woff2') format('woff2'),
+    url('fonts/cfglitchcity-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'terminator_genregular';
+    src: url('fonts/18922-webfont.woff2') format('woff2'),
+    url('fonts/18922-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.main1 {
+/*    margin: auto;*/
+    font-family: 'terminator_genregular', Helvetica;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*margin-top: 160px;*/
+    width: 60%;
+    color: white;
+    opacity: 0.78;
+    /*background: #060028;*/
+    background: black;
+    font-size: 1.3em;
+    line-height: 1.425em;
+    ttext-indent: 1.5em; /* Отступ первой строки */
+    text-align: justify; /* Выравнивание по ширине */
+
+}
+
+.topmenu{
+    margin: auto;
+    padding: 2%;
+    width: 50%;
+}
+
+.sendform1 .almost1001{
+    margin: 1%;
+
+    text-align: left;
+    width: 100%;
+    font-size: 1.21em;
+    line-height: 1.3em;
+}
+
+
+/** {
+    box-sizing: border-box;
+}*/
+
+body {
+    margin: 0;
+    /*font-size: 17px;*/
+
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #000000;
+    width: 100%;
+    /*padding: 40px;*/
+}
+
+a {
+    color: #8888ff;
+}
+
+select option {
+    /*margin: 40px;*/
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+select option[value="1"] {
+    background: rgba(100, 100, 100, 0.3);
+}
+
+select option[value="2"] {
+    background: rgba(150, 150, 150, 0.3);
+}
+
+select option[value="3"] {
+    background: rgba(200, 200, 200, 0.3);
+}
+
+select option[value="4"] {
+    background: rgba(250, 250, 250, 0.3);
+}
+
