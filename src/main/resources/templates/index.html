@@ -11,21 +11,15 @@
     <link th:href="@{/css/lightbox.css}" rel="stylesheet" />
     <link th:href="@{/css/style.css}" rel="stylesheet" />
 
-<!--    <h:outputStylesheet library="css" name="table-style.css"/>-->
-<!--    <h:outputStylesheet library="css" name="lightbox.css"/>-->
-<!--    <h:outputStylesheet library="css" name="demo.css"/>-->
-<!--    <h:outputStylesheet library="css" name="style.css"/>-->
     <script type="text/javascript" th:src="@{/js/lightbox.js}"></script>
-<!--    <h:outputScript library="js" name="lightbox.js"/>-->
     <script type="text/javascript" th:src="@{/js/lightbox.js}"></script>
-<!--    <h:outputScript library="primefaces" name="jquery/jquery.js" target="head"/>-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
     <meta name="description" content="software development"/>
     <meta name="keywords" content="software development"/>
-    <meta name="author" content="Ekaterina Ivanova"/>
+    <meta name="author" content="Catherine Ivanova"/>
 
 </head>
 <body >
@@ -45,12 +39,12 @@
         <div class="navigation">
             <!--                <h1>МЕНЮ И НАВИГАЦИЯ</h1>-->
             <form style="text-align: right;">
-                <th:button type="button" th:image="@{/dist/images/ru32x32.png}" onclick="window.location.replace('?lang=ru');"/>
-<!--                <h:commandButton action="#{main.setLocale('ru_RU')}"-->
-<!--                                 value="RUSSIAN" image="dist/images/ru32x32.png" style="color: white;"/>&nbsp;-->
-<!--                <h:commandButton action="#{main.setLocale('en')}"-->
-<!--                                 value="ENGLISH" image="dist/images/us32x32.png" style="color: white;"/>-->
-
+                <button type="button" onclick="window.location.replace('?lang=ru');">
+                    <img th:src="@{/dist/images/ru32x32.png}" />
+                </button>
+                <button type="button" onclick="window.location.replace('?lang=en');">
+                    <img th:src="@{/dist/images/us32x32.png}" />
+                </button>
             </form>
         </div>
 
@@ -60,17 +54,17 @@
 
                 <form>
                     <h3 th:text="#{greeting}"></h3>
-                    <h:outputText value="#{msg['intro.text']}"/>
+                    <p th:text="#{intro.text}"/>
 
                 </form>
-                <h:form class="sendform1">
+                <form class="sendform1">
 
-                    <br/><p><span class="p2"><a href="mom/web/index.html">#{msg['moms.art']}</a></span></p><br/>
-                    <br/>#{msg['samples']}:<br/>
+                    <br/><p><span class="p2"><a href="mom/web/index.html" th:text="#{moms.art}"></a></span></p><br/>
+                    <br/><p th:text="#{samples}"/><br/>
                     <span class="p2"><a
-                            href="https://bitbucket.org/iva-nova-e-katerina/allinone/src/master/src/">#{msg['allinone']}</a></span><br/>
-                    <span class="p2"><a
-                            href="https://bitbucket.org/iva-nova-e-katerina/allinone/src/master/com/iceja/">#{msg['3dmod']}</a></span><br/>
+                            href="https://github.com/iva-nova-e-katerina/CachingObjects" th:text="#{allinone}"></a></span><br/>
+<!--                    <span class="p2"><a-->
+<!--                            href="https://bitbucket.org/iva-nova-e-katerina/allinone/src/master/com/iceja/">#{msg['3dmod']}</a></span><br/>-->
                     <span class="p2"><a
                             href="https://bitbucket.org/iva-nova-e-katerina/insurance-test">#{msg['insurancetest']}</a></span><br/>
                     <span class="p2"><a
@@ -111,7 +105,7 @@
                     <h:inputTextarea value="#{main.message}" cols="80" rows="18" class="almost1001"/>
                     <br/>
                     <h:commandButton value="#{msg['send.button']}" action="#{main.sendmessage()}"></h:commandButton>
-                </h:form>
+                </form>
             </div>
         </div>
 
