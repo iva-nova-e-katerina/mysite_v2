@@ -5,7 +5,7 @@
       xmlns:th="http://www.thymeleaf.org"
       lang="en">
 <head>
-    <title>Ekaterina Ivanova</title>
+    <title>Catherine Ivanova</title>
     <link th:href="@{/css/main.css}" rel="stylesheet" />
     <link th:href="@{/css/table-style.css}" rel="stylesheet" />
     <link th:href="@{/css/lightbox.css}" rel="stylesheet" />
@@ -66,35 +66,26 @@
 <!--                    <span class="p2"><a-->
 <!--                            href="https://bitbucket.org/iva-nova-e-katerina/allinone/src/master/com/iceja/">#{msg['3dmod']}</a></span><br/>-->
                     <span class="p2"><a
-                            href="https://bitbucket.org/iva-nova-e-katerina/insurance-test">#{msg['insurancetest']}</a></span><br/>
+                            href="https://github.com/iva-nova-e-katerina/insurance-test" th:text="#{insurancetest}"></a></span><br/>
                     <span class="p2"><a
-                            href="https://bitbucket.org/iva-nova-e-katerina/allinone/src/master/chatserver_v3/">#{msg['chatserver']}</a></span><br/>
+                            href="https://github.com/iva-nova-e-katerina/chatserver" th:text="#{chatserver}"></a></span><br/>
                     <span class="p2"><a
-                            href="https://github.com/iva-nova-e-katerina/AllSamples/tree/numbertowords">#{msg['numtowords']}</a></span><br/>
+                            href="https://github.com/iva-nova-e-katerina/numbertowords"  th:text="#{numtowords}"></a></span><br/>
                     <span class="p2"><a
-                            href="https://github.com/iva-nova-e-katerina/AllSamples/tree/numbertowords">#{msg['iceja.sources']}</a></span><br/>
+                            href="https://github.com/iva-nova-e-katerina/mysite_v2" th:text="#{iceja.sources}"></a></span><br/>
 
 
-                    <br/><span class="p2"><a href="#{msg['resume.link']}">#{msg['resume']}</a></span><br/>
-                    <!--a href="dist/images/SCAN0004.JPG" data-lightbox="roadtrip">#{msg['diploma']} 1</a>
-                    <a href="dist/images/SCAN0001.JPG" data-lightbox="roadtrip"> 2</a>
-                    <a href="dist/images/SCAN0003.JPG" data-lightbox="roadtrip"> 3</a>
-                    <a href="dist/images/SCAN0002.JPG" data-lightbox="roadtrip"> 4</a-->
+                    <br/><span class="p2"><a th:href="#{resume.link}" th:text="#{resume}"></a></span><br/>
+
                     <br/>
                     <br/>
                     <br/>
-                    #{msg['talk.to.me']}
+                    <p th:text="#{talk.to.me'}"></p>
                     <br/>
-                    <!--                        #{msg['sender']}<span><h:inputText value="#{main.sender}"></h:inputText></span><br/>-->
-                    <!--                        &lt;!&ndash; #{msg['topic']}<h:inputText value=""><br/&ndash;&gt;-->
-                    <!--                        <br/>-->
-
-
-                    #{msg['sender']}<p:inputText id="email" required="true" label="email" size="13"
+                    <p th:text="#{sender}"><input id="email" required="true" label="email" size="13"
                                                  requiredMessage="#{msg['please.enter']}"
                                                  validatorMessage="#{msg['invalid.email']}"
-                                                 value="#{main.sender}">
-
+                                                 value="#{main.sender}"></p>
                     <f:validateRegex
                             pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>
 
