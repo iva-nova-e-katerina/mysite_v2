@@ -80,36 +80,39 @@
                     <br/>
                     <br/>
                     <br/>
-                    <p th:text="#{talk.to.me'}"></p>
+                    <p th:text="#{talk.to.me}"></p>
                     <br/>
-                    <p th:text="#{sender}"><input id="email" required="true" label="email" size="13"
-                                                 requiredMessage="#{msg['please.enter']}"
-                                                 validatorMessage="#{msg['invalid.email']}"
-                                                 value="#{main.sender}"></p>
-                    <f:validateRegex
-                            pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>
+                    <p th:text="#{sender}"></p><input size="13" type="text" th:field="*{sender}" /><br/>
+                    <textarea cols="80" rows="18" class="almost1001" th:field="*{text}">
+                    </textarea>
+                    <input type="submit" onclick=""/>
 
-                </p:inputText>
-                    <p:watermark for="email" value="#{msg['email.address']} *"/>
-                    <p:message for="email"/>
-                    <!--                        <br/>-->
-                    <h:inputTextarea value="#{main.message}" cols="80" rows="18" class="almost1001"/>
-                    <br/>
-                    <h:commandButton value="#{msg['send.button']}" action="#{main.sendmessage()}"></h:commandButton>
+<!--                        <input id="email" required="true" label="email" size="13"-->
+<!--                                                 requiredMessage="#{msg['please.enter']}"-->
+<!--                                                 validatorMessage="#{msg['invalid.email']}"-->
+<!--                                                 value="#{main.sender}">-->
+<!--                    <f:validateRegex-->
+<!--                            pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>-->
+
+<!--                </p:inputText>-->
+<!--                    <p:watermark for="email" value="#{msg['email.address']} *"/>-->
+<!--                    <p:message for="email"/>-->
+<!--                    &lt;!&ndash;                        <br/>&ndash;&gt;-->
+<!--                    <h:inputTextarea value="#{main.message}" cols="80" rows="18" class="almost1001"/>-->
+<!--                    <br/>-->
+<!--                    <h:commandButton value="#{msg['send.button']}" action="#{main.sendmessage()}"></h:commandButton>-->
                 </form>
             </div>
         </div>
 
         <div class="footer">
             <div>
-                #{msg['contacts']}:
+                <p th:text="#{contacts}"></p>
             </div>
             <div>
                 skype: jewelope, telegram: @iceja, jabber: iceja13@xmpp.jp <br/>
-                <a href="https://www.facebook.com/soft600">me @ facebook, </a>&nbsp;<a
-                    href="https://www.vk.com/sw_development">me @ vk.com, </a>&nbsp;<a
-                    href="https://www.twitter.com/iceja13">me @ twitter</a><br/>
-                tox: 529918DEB8DA36449538EEDE2AECD056C20DED5EC0CAE1692D52893960903C6BA7C65FD04BF3
+
+
             </div>
         </div>
     </div>

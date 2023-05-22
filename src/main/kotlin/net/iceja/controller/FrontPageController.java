@@ -7,15 +7,18 @@ use.
 package net.iceja.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class FrontPageController {
 
     @GetMapping(value = "/")
     //@ResponseBody
-    String getMainPage(){
+    String getMainPage( Model m){
+        m.addAttribute("sender","TEST");
+        m.addAttribute("text","TEST text");
         return "index";
     }
 }
