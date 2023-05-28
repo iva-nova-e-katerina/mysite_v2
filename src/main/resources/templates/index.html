@@ -5,66 +5,23 @@
       xmlns:th="http://www.thymeleaf.org"
       lang="en">
 <head>
-    <title>Catherine Ivanova</title>
-    <link th:href="@{/css/main.css}" rel="stylesheet" />
-    <link th:href="@{/css/table-style.css}" rel="stylesheet" />
-    <link th:href="@{/css/lightbox.css}" rel="stylesheet" />
-    <link th:href="@{/css/style.css}" rel="stylesheet" />
-
-    <script type="text/javascript" th:src="@{/js/lightbox.js}"></script>
-    <script type="text/javascript" th:src="@{/js/lightbox.js}"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-
-    <meta name="description" content="software development"/>
-    <meta name="keywords" content="software development"/>
-    <meta name="author" content="Catherine Ivanova"/>
-
+    <head th:replace="header1 :: header1"> </head>
 </head>
 <body >
-    <div class="hero-wrapper">
-        <div class="hero">
-            <figure>
-                <video autoplay="true" muted="true" loop="true" id="myVideo">
-                    <source th:src="@{/dist/pflag_riped.mp4}" type="video/mp4"></source>
-                    Your browser does not support HTML5 video.
-                    <font style="color:#FF00FF;";>
-                </video>
-            </figure>
-        </div>
-    </div>
-
+    <div th:replace="header-video :: header-video"> </div>
     <div class="parallax-wraper">
-        <div class="navigation">
-            <!--                <h1>МЕНЮ И НАВИГАЦИЯ</h1>-->
-            <form style="text-align: right;">
-                <button type="button" onclick="window.location.replace('?lang=ru');">
-                    <img th:src="@{/dist/images/ru32x32.png}" />
-                </button>
-                <button type="button" onclick="window.location.replace('?lang=en');">
-                    <img th:src="@{/dist/images/us32x32.png}" />
-                </button>
-            </form>
-        </div>
-
+        <div th:replace="header-buttons :: header-buttons"> </div>
         <div class="parallax">
-
             <div class="main1">
-
                 <form>
                     <h3 th:text="#{greeting}"></h3>
                     <p th:text="#{intro.text}"/>
-
                 </form>
                 <form class="sendform1">
-
                     <br/><p><span class="p2"><a href="mom/web/index.html" th:text="#{moms.art}"></a></span></p><br/>
                     <br/><p th:text="#{samples}"/><br/>
                     <span class="p2"><a
                             href="https://github.com/iva-nova-e-katerina/CachingObjects" th:text="#{allinone}"></a></span><br/>
-<!--                    <span class="p2"><a-->
-<!--                            href="https://bitbucket.org/iva-nova-e-katerina/allinone/src/master/com/iceja/">#{msg['3dmod']}</a></span><br/>-->
                     <span class="p2"><a
                             href="https://github.com/iva-nova-e-katerina/insurance-test" th:text="#{insurancetest}"></a></span><br/>
                     <span class="p2"><a
@@ -73,10 +30,7 @@
                             href="https://github.com/iva-nova-e-katerina/numbertowords"  th:text="#{numtowords}"></a></span><br/>
                     <span class="p2"><a
                             href="https://github.com/iva-nova-e-katerina/mysite_v2" th:text="#{iceja.sources}"></a></span><br/>
-
-
                     <br/><span class="p2"><a th:href="#{resume.link}" th:text="#{resume}"></a></span><br/>
-
                     <br/>
                     <br/>
                     <br/>
@@ -104,22 +58,8 @@
                 </form>
             </div>
         </div>
-
-        <div class="footer">
-            <div>
-                <p th:text="#{contacts}"></p>
-            </div>
-            <div>
-                skype: jewelope, telegram: @iceja, jabber: iceja13@xmpp.jp <br/>
-
-
-            </div>
-        </div>
+        <div th:replace="footer :: footer"> </div>
     </div>
-    <!--    <div class="basement">&bnsp;</div>-->
-
-
-
 </body>
 <script type="application/javascript">
     function ValidateEmail(mail) {
