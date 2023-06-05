@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div th:fragment="header-buttons">
+  <div class="navigation">
+  <!--                <h1>МЕНЮ И НАВИГАЦИЯ</h1>-->
+  <form style="text-align: right;">
+    <button type="button" onclick="window.location.replace('?lang=ru');">
+      <img th:src="@{/dist/images/ru32x32.png}" />
+    </button>
+    <button type="button" onclick="window.location.replace('?lang=en');">
+      <img th:src="@{/dist/images/us32x32.png}" />
+    </button>
+  </form>
+</div>
+</div>
