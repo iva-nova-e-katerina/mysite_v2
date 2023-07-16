@@ -17,7 +17,7 @@
                     <h3 th:text="#{greeting}"></h3>
                     <p th:text="#{intro.text}"/>
                 </form>
-                <form class="sendform1">
+                <form class="sendform1" method="POST">
                     <br/><p><span class="p2"><a href="mom/web/index.html" th:text="#{moms.art}"></a></span></p><br/>
                     <br/><p th:text="#{samples}"/><br/>
                     <span class="p2"><a
@@ -36,7 +36,7 @@
                     <br/>
                     <p th:text="#{talk.to.me}"></p>
                     <br/>
-                    <p th:text="#{sender}"></p><input size="13" type="text" th:field="*{sender}" /><br/>
+                    <p th:text="#{sender}"></p><input size="43" type="text" th:field="*{sender}" /><br/>
                     <textarea cols="80" rows="18" class="almost1001" th:field="*{text}">
                     </textarea>
                     <input type="submit" onclick=""/>
@@ -58,7 +58,7 @@
                 </form>
             </div>
         </div>
-        <div th:replace="footer :: footer"> </div>
+        <div th:replace="footer :: footer2"> </div>
     </div>
 </body>
 <script type="application/javascript">
