@@ -18,11 +18,11 @@ public class FrontPageController {
 
     @GetMapping(value = "/")
     //@ResponseBody
-    String getMainPage(MainForm m){
-    //    m.addAttribute("sender","TEST");
-    //    m.addAttribute("text","TEST text");
-        m.setSender("test1");
-        m.setText("test2");
+    String getMainPage(Model m){
+        m.addAttribute("sender","TEST");
+        m.addAttribute("text","TEST text");
+//        m.setSender("test1");
+//        m.setText("test2");
 
         return "index";
     }
