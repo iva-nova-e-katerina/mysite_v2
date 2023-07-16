@@ -5,6 +5,7 @@ use.
 */
 package net.iceja
 
+import java.util.*
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
@@ -14,9 +15,6 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 import org.springframework.web.servlet.i18n.CookieLocaleResolver
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor
-import org.springframework.web.servlet.i18n.SessionLocaleResolver
-import java.util.*
-
 
 @SpringBootApplication
 @EnableConfigurationProperties(IcejaProperties::class)
@@ -38,7 +36,6 @@ class IcejaApplication : WebMvcConfigurer {
     override fun addInterceptors(registry: InterceptorRegistry) {
         registry.addInterceptor(localeChangeInterceptor()!!)
     }
-
 }
 
 fun main(args: Array<String>) {

@@ -6,6 +6,11 @@ import jakarta.validation.constraints.Size;
 
 public class MainForm {
 
+    public MainForm(String sender, String text){
+        this.sender = sender;
+        this.text = text;
+    }
+
     @NotNull
     @Size(min=5, max=66)
     @Pattern(regexp = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")

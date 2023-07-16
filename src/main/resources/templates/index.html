@@ -17,7 +17,7 @@
                     <h3 th:text="#{greeting}"></h3>
                     <p th:text="#{intro.text}"/>
                 </form>
-                <form class="sendform1" method="POST">
+                <form class="sendform1" method="POST" th:object="m">
                     <br/><p><span class="p2"><a href="mom/web/index.html" th:text="#{moms.art}"></a></span></p><br/>
                     <br/><p th:text="#{samples}"/><br/>
                     <span class="p2"><a
@@ -36,25 +36,12 @@
                     <br/>
                     <p th:text="#{talk.to.me}"></p>
                     <br/>
-                    <p th:text="#{sender}"></p><input size="43" type="text" th:field="*{sender}" /><br/>
-                    <textarea cols="80" rows="18" class="almost1001" th:field="*{text}">
+                    <p th:text="#{sender}"></p><input size="43" type="text" th:field="${m.sender}" /><br/>
+                    <textarea cols="80" rows="18" class="almost1001" th:field="${m.text}">
                     </textarea>
                     <input type="submit" onclick=""/>
 
-<!--                        <input id="email" required="true" label="email" size="13"-->
-<!--                                                 requiredMessage="#{msg['please.enter']}"-->
-<!--                                                 validatorMessage="#{msg['invalid.email']}"-->
-<!--                                                 value="#{main.sender}">-->
-<!--                    <f:validateRegex-->
-<!--                            pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>-->
 
-<!--                </p:inputText>-->
-<!--                    <p:watermark for="email" value="#{msg['email.address']} *"/>-->
-<!--                    <p:message for="email"/>-->
-<!--                    &lt;!&ndash;                        <br/>&ndash;&gt;-->
-<!--                    <h:inputTextarea value="#{main.message}" cols="80" rows="18" class="almost1001"/>-->
-<!--                    <br/>-->
-<!--                    <h:commandButton value="#{msg['send.button']}" action="#{main.sendmessage()}"></h:commandButton>-->
                 </form>
             </div>
         </div>
