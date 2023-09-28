@@ -17,7 +17,7 @@
                     <h3 th:text="#{greeting}"></h3>
                     <p th:text="#{intro.text}"/>
                 </form>
-                <form class="sendform1" method="POST" th:object="m">
+                <form class="sendform1" method="POST" th:object="${m}">
                     <br/><p><span class="p2"><a href="mom/web/index.html" th:text="#{moms.art}"></a></span></p><br/>
                     <br/><p th:text="#{samples}"/><br/>
                     <span class="p2"><a
